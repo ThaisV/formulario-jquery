@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>FORMULARIO ONG</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    
+    <h1>FORMULARIO ONG</h1>
+
+
+<form id="formulario" name="formContacto" method="post"  onsubmit="return validacion()">
+	<label for="nombre">Nombre Completo*:</label>
+	<input name="name" placeholder="Introduce tu nombre" class="required" /><br />
+                
+	<label for="rut o pasaporte">Rut/Pasaporte*:</label>
+	<input name="rut" placeholder="Ingresa aqui tu rut/pasaporte" class="required" /><br />
+    
+	<label for="ciudad">Ciudad de residencia:</label>
+	<input name="city" placeholder="Ingresatu cuidad de residencia" /><br />
+            
+	<label for="telefono">Teléfono:</label>
+	<input name="phone" placeholder="Ingresa tu numero" /><br />
+        
+	<label for="mail">E-mail*:</label>
+	<input name="mail" placeholder="Ingresa tu email" class="required" /><br />
+            
+	<label id="modif01" for="comentario">Comentario:</label>
+	<textarea id="modif02" placeholder="Escribeme tu comentario aquí" name="comment"></textarea><br />
+                    
+	<div id="aster" > * | Campos obligatorios</div>
+                            
+	<input class="botonAcceder" type="submit" id="boton" value="Enviar" />
+    
+	<input class="restablecer" type="reset" id="botom" value="Limpiar" >
+</form>  
+
+<script>
+	valor = document.getElementById("mail").value;
+if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor)) ) {
+  return false;
+}
+valor = document.getElementById("campo").value;
+if( !(/^\d{9}$/.test(valor)) ) {
+  return false;
+}
+
+</script>
+
+</body>
+</html>
